@@ -13,8 +13,8 @@ image = cv2.imread(image_path)
 _, image_data = cv2.imencode('.jpg', image) 
 image_base64 = image_data.tobytes()
 
-# Sending request to BrainyPi
-url = "http://127.0.0.1:9900/v1/detectobjects"  
+# Sending request to server
+url = "url of api server"  
 headers = {'Content-Type': 'application/json'}
 response = requests.post(url, data = image_data.tobytes())
 #Save the result
